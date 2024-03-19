@@ -1,0 +1,19 @@
+#!/bin/bash
+
+### Install zsh
+sudo apt install zsh -y
+
+### Uncomment to change zsh as your default shell
+# chsh -s $(which zsh)
+
+### Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+### Install zsh plugins
+cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions.git && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+### Add the following in "Plugins" in .zshrc
+# zsh-autosuggestions zsh-syntax-highlighting
+
+### Source zshrc
+source ~/.zshrc
